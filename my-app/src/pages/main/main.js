@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainContainer = () => {
-	return <div>Main</div>;
+	return <div>123</div>;
 };
 
 export const Main = styled(MainContainer)``;
