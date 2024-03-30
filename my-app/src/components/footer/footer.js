@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FooterContainer = ({ className }) => {
-	return <div className={className}>123</div>;
+	return <div className={className}></div>;
 };
 
 export const Footer = styled(FooterContainer)`

@@ -19,7 +19,7 @@ export const App = () => {
 					<Routes>
 						<Route path="/" element={<Main />} />
 						<Route path="/favorits" element={<div>Избранные</div>} />
-						<Route path="/student" element={<div>Студент</div>} />
+						<Route path="/student/:id" element={<div>Студент</div>} />
 						<Route path="*" element={<div>Ошибка</div>} />
 					</Routes>
 				</Page>
