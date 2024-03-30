@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useMatch } from 'react-router-dom';
 import { Item } from './item';
 import styled from 'styled-components';
@@ -23,3 +24,7 @@ export const Menu = styled(MenuContainer)`
 	justify-content: flex-start;
 	margin: 0;
 `;
+
+MenuContainer.propTypes = {
+	className: PropTypes.string,
+};
