@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Main } from './pages';
+import { Main, Student } from './pages';
 import { setStudents } from './localstorage';
 import { db } from './db';
 import { Header, Footer } from './components';
@@ -19,7 +19,7 @@ export const App = () => {
 					<Routes>
 						<Route path="/" element={<Main />} />
 						<Route path="/favorits" element={<div>Избранные</div>} />
-						<Route path="/student/:id" element={<div>Студент</div>} />
+						<Route path="/student/:id" element={<Student />} />
 						<Route path="*" element={<div>Ошибка</div>} />
 					</Routes>
 				</Page>
