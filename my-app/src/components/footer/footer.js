@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const FooterContainer = ({ className }) => {
-	return <div className={className}></div>;
+	const year = new Date().getFullYear();
+
+	return <div className={className}>{year}</div>;
 };
 
 export const Footer = styled(FooterContainer)`
@@ -10,4 +12,10 @@ export const Footer = styled(FooterContainer)`
 	border-top: 1px solid gray;
 	width: 100%;
 	margin: auto auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 17px;
+	font-weight: 500;
 `;
