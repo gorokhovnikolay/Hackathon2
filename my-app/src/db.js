@@ -93,7 +93,7 @@ export const db = [
 				value: '75',
 			},
 			{
-				id: '3',
+				id: '4',
 				name_technologie: 'REACT',
 				value: '40',
 			},
@@ -158,7 +158,7 @@ export const db = [
 				value: '75',
 			},
 			{
-				id: '3',
+				id: '4',
 				name_technology: 'REACT',
 				value: '75',
 			},

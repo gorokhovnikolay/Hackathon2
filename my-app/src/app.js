@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Favourites, Main, Student } from './pages';
 import { setStudents } from './localstorage';
@@ -22,9 +22,12 @@ const Content = styled.div`
 `;
 
 export const App = () => {
-	if (localStorage.getItem('students') === null) {
+	// if (localStorage.getItem('students') === null) {
+	// 	setStudents(db, 'students');
+	// }
+	useEffect(() => {
 		setStudents(db, 'students');
-	}
+	}, []);
 
 	return (
 		<AppColumn>

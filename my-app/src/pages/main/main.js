@@ -3,7 +3,7 @@ import Flickity from 'react-flickity-component';
 import '../../components/flickity.css';
 import { StudentCard, Discription } from '../../components';
 import { getStudents } from '../../localstorage';
-import star from '../../../public/star.png';
+// import star from '../../../public/star.png';
 import { Link } from 'react-router-dom';
 
 const PlateH2 = styled.h2`
@@ -35,6 +35,7 @@ const Star = styled.img`
 const students = getStudents('students');
 
 const MainContainer = ({ className }) => {
+	console.log(students);
 	return (
 		<div className={className}>
 			<H2> Hackathon#2 </H2>
@@ -58,13 +59,14 @@ const MainContainer = ({ className }) => {
 						return (
 							<div key={student.id} className="Plate">
 								<Link to={`/student/${student.id}`}>
-									<StudentCard index={index + 1}>
+									{/* <StudentCard index={index + 1}>
 										{student.is_favorite ? (
-											<Star src={star} alt="*" />
+											<Star src="/star.png" alt="*" />
 										) : (
 											''
 										)}
-									</StudentCard>
+									</StudentCard> */}
+									<StudentCard student={student} />
 								</Link>
 								<PlateH2>{student.name}</PlateH2>
 							</div>

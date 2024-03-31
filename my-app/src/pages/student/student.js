@@ -4,7 +4,7 @@ import starFull from '../../img/star-full.png';
 import starEmpty from '../../img/star-empty.png';
 import { useParams } from 'react-router';
 import { BreadCrumbs } from '../../components';
-import { setStudents } from '../../localstorage';
+import { getStudents, setStudents } from '../../localstorage';
 
 const Badge = ({ color, content }) => (
 	<div>
@@ -21,10 +21,10 @@ const Progress = ({ value, name_technologie, color, type }) => (
 const Button = ({ color, onClick, name, type }) => (
 	<button onClick={onClick}>{name}</button>
 );
+const students = JSON.parse(localStorage.getItem('students'));
 
 const StudentContainer = ({ className }) => {
 	const { id } = useParams();
-	const students = JSON.parse(localStorage.getItem('students'));
 	const [student, setStudent] = useState(students.find((person) => person.id === id));
 
 	const onChangeFavorite = () => {
@@ -38,6 +38,7 @@ const StudentContainer = ({ className }) => {
 			}),
 			'students',
 		);
+
 		setStudent({ ...student, is_favorite: !student.is_favorite });
 	};
 
