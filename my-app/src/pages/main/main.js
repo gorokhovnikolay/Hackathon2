@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 import '../../components/flickity.css';
-import { StudentCard, Discription } from '../../components';
+import { StudentCard, Discription, H2 } from '../../components';
 import { getStudents } from '../../localstorage';
 // import star from '../../../public/star.png';
 import { Link } from 'react-router-dom';
@@ -11,17 +11,14 @@ const PlateH2 = styled.h2`
 	color: black;
 	margin: 16px;
 	text-align: center;
-`;
-
-const H2 = styled.h2`
-	margin: 0;
-	text-align: center;
-	font-size: 40px;
+	text-shadow: 0 0 7px #c1c1d9;
+	text-decoration: underline;
 `;
 
 const Slyder = styled.div`
 	margin: 10px;
-	height: 500px;
+	min-height: 500px;
+	font-family: Benzin;
 `;
 
 const flickityOptions = {
@@ -40,7 +37,7 @@ const MainContainer = ({ className }) => {
 
 	return (
 		<div className={className}>
-			<H2> Hackathon#2 </H2>
+			<H2> HACKATHON#2 </H2>
 			<Discription>
 				Наша команда - это креативные профессионалы ,<br />
 				способные создавать веб-проекты высокого уровня.
