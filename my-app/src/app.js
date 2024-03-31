@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Main, Student } from './pages';
+import { Favourites, Main, Student } from './pages';
 import { setStudents } from './localstorage';
 import { db } from './db';
 import { Header, Footer } from './components';
 import styled from 'styled-components';
-
 
 const AppColumn = styled.div`
 	display: flex;
@@ -18,10 +17,9 @@ const AppColumn = styled.div`
 `;
 
 const Content = styled.div`
-	padding: 100px 0;
+	padding: 0 0 100px 0;
 	min-height: 100%;
 `;
-
 
 export const App = () => {
 	if (localStorage.getItem('students') === null) {
@@ -34,7 +32,7 @@ export const App = () => {
 			<Content>
 				<Routes>
 					<Route path="/" element={<Main />} />
-					<Route path="/favorits" element={<div>Избранные</div>} />
+					<Route path="/favorits" element={<Favourites />} />
 					<Route path="/student/:id" element={<Student />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>

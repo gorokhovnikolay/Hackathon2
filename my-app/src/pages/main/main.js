@@ -1,42 +1,10 @@
 import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 import '../../components/flickity.css';
-import KMI from '../../components/images/KMI.PNG';
-import WOLF from '../../components/images/wolf.jpg';
-import { StudentCard } from '../../components';
-
-const students = {
-	id: [1, 2, 3, 4],
-	name: ['Николай', 'Максим', 'Алексей', 'Николай'],
-};
-const Discription = styled.div`
-	background-color: rgba(217, 217, 217, 0.3);
-	margin: 10px;
-	height: 200px;
-	text-align: center;
-	font-family: Benzin;
-	color: #9adceb;
-	text-shadow:
-		-0 -1px 2px #6137bb,
-		0 -1px 2px #6137bb,
-		-0 1px 2px #6137bb,
-		0 1px 2px #6137bb,
-		-1px -0 2px #6137bb,
-		1px -0 2px #6137bb,
-		-1px 0 2px #6137bb,
-		1px 0 2px #6137bb,
-		-1px -1px 2px #6137bb,
-		1px -1px 2px #6137bb,
-		-1px 1px 2px #6137bb,
-		1px 1px 2px #6137bb,
-		-1px -1px 2px #6137bb,
-		1px -1px 2px #6137bb,
-		-1px 1px 2px #6137bb,
-		1px 1px 2px #6137bb;
-	font-size: 22px;
-	border-radius: 50px;
-	padding: 25px;
-`;
+import { StudentCard, Discription } from '../../components';
+import { getStudents } from '../../localstorage';
+import star from '../../../public/star.png';
+import { Link } from 'react-router-dom';
 
 const PlateH2 = styled.h2`
 	color: black;
@@ -51,13 +19,20 @@ const H2 = styled.h2`
 `;
 
 const Slyder = styled.div`
-	margin: 50px;
+	margin: 10px;
 	height: 500px;
 `;
 
 const flickityOptions = {
 	initialIndex: 2,
 };
+
+const Star = styled.img`
+	height: 50px;
+	width: 50px;
+`;
+
+const students = getStudents('students');
 
 const MainContainer = ({ className }) => {
 	return (
@@ -79,12 +54,19 @@ const MainContainer = ({ className }) => {
 					reloadOnUpdate
 					static
 				>
-					{students['id'].map((index) => {
+					{students.map((student, index) => {
 						return (
-							<div key={index} className="Plate">
-								<StudentCard index={index} />
-
-								<PlateH2>{students['name'][index - 1]}</PlateH2>
+							<div key={student.id} className="Plate">
+								<Link to={`/student/${student.id}`}>
+									<StudentCard index={index + 1}>
+										{student.is_favorite ? (
+											<Star src={star} alt="*" />
+										) : (
+											''
+										)}
+									</StudentCard>
+								</Link>
+								<PlateH2>{student.name}</PlateH2>
 							</div>
 						);
 					})}
