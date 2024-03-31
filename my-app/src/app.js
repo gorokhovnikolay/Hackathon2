@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Main, Student } from './pages';
+import { Favourites, Main, Student } from './pages';
 import { setStudents } from './localstorage';
 import { db } from './db';
 import { Header, Footer } from './components';
@@ -32,7 +32,7 @@ export const App = () => {
 			<Content>
 				<Routes>
 					<Route path="/" element={<Main />} />
-					<Route path="/favorits" element={<div>Избранные</div>} />
+					<Route path="/favorits" element={<Favourites />} />
 					<Route path="/student/:id" element={<Student />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
