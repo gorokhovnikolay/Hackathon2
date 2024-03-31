@@ -4,3 +4,5 @@ export * from './button/button';
 export * from './card/card';
 export * from './navbar/navbar';
 export * from './progress/progress';
+export * from './students-card/studen-card';
+
