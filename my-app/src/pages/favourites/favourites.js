@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StudentCard } from '../../components';
+import { StudentCard, H2 } from '../../components';
 import { getStudents } from '../../localstorage';
 import { Link } from 'react-router-dom';
 
@@ -7,12 +7,6 @@ const PlateH2 = styled.h2`
 	color: black;
 	margin: 16px;
 	text-align: center;
-`;
-
-const H2 = styled.h2`
-	margin: 0;
-	text-align: center;
-	font-size: 40px;
 `;
 
 const FavouritesStudents = styled.div`
@@ -27,7 +21,7 @@ const students = getStudents('students');
 const FavouritesContainer = ({ className }) => {
 	return (
 		<div className={className}>
-			<H2> Hackathon#2 </H2>
+			<H2> 🜲 Избранные 🜲 </H2>
 			<FavouritesStudents>
 				{students.map((student, index) => {
 					return (
