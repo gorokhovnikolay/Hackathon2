@@ -22,9 +22,10 @@ const FavouritesStudents = styled.div`
 	min-height: 500px;
 `;
 
-const students = getStudents('students');
-
 const FavouritesContainer = ({ className }) => {
+	const students = getStudents('students').filter(
+		(student) => student.is_favorite === true,
+	);
 	return (
 		<div className={className}>
 			<H2> Hackathon#2 </H2>
@@ -33,7 +34,7 @@ const FavouritesContainer = ({ className }) => {
 					return (
 						<div key={student.id} className="Plate">
 							<Link to={`/student/${student.id}`}>
-								{student.is_favorite ? (
+								{/* {student.is_favorite ? (
 									<StudentCard
 										index={index + 1}
 										boxShadow="0 0 20px #ffd700"
@@ -42,7 +43,18 @@ const FavouritesContainer = ({ className }) => {
 									</StudentCard>
 								) : (
 									''
-								)}
+								)} */}
+								<Link to={`/student/${student.id}`}>
+									{/* <StudentCard index={index + 1}>
+										{student.is_favorite ? (
+											<Star src="/star.png" alt="*" />
+										) : (
+											''
+										)}
+									</StudentCard> */}
+									<StudentCard student={student} />
+								</Link>
+								<PlateH2>{student.name}</PlateH2>
 							</Link>
 						</div>
 					);

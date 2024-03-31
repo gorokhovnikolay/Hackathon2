@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router';
 import styled from 'styled-components';
 import { getStudents } from '../../localstorage';
+import { Link } from 'react-router-dom';
 
 export const BreadCrumbsContainer = ({ className }) => {
 	const location = useLocation();
@@ -22,7 +23,7 @@ export const BreadCrumbsContainer = ({ className }) => {
 				if (i === 0) {
 					return (
 						<>
-							<a href={`/`}>Главная</a>
+							<Link to="/">Главная</Link>
 							<div> / </div>
 						</>
 					);

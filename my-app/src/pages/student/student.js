@@ -4,13 +4,8 @@ import starFull from '../../img/star-full.png';
 import starEmpty from '../../img/star-empty.png';
 import { useParams } from 'react-router';
 import { BreadCrumbs } from '../../components';
-import { setStudents } from '../../localstorage';
-
-const Badge = ({ color, content }) => (
-	<div>
-		{content} - {color}
-	</div>
-);
+import { getStudents, setStudents } from '../../localstorage';
+import { Badge } from '../../components';
 
 const Progress = ({ value, name_technologie, color, type }) => (
 	<div>
@@ -24,12 +19,13 @@ const Button = ({ color, onClick, name, type }) => (
 
 const StudentContainer = ({ className }) => {
 	const { id } = useParams();
-	const students = JSON.parse(localStorage.getItem('students'));
-	const [student, setStudent] = useState(students.find((person) => person.id === id));
+
+	const [studentss, setStudentss] = useState(getStudents('students'));
+	const [student, setStudent] = useState(studentss.find((person) => person.id === id));
 
 	const onChangeFavorite = () => {
 		setStudents(
-			students.map((person) => {
+			studentss.map((person) => {
 				if (person.id === id) {
 					return { ...person, is_favorite: !person.is_favorite };
 				} else {
@@ -38,7 +34,9 @@ const StudentContainer = ({ className }) => {
 			}),
 			'students',
 		);
-		setStudent({ ...student, is_favorite: !student.is_favorite });
+		setStudentss(getStudents('students'));
+		const newStudent = getStudents('students').find((person) => person.id === id);
+		setStudent(newStudent);
 	};
 
 	return (
@@ -54,11 +52,9 @@ const StudentContainer = ({ className }) => {
 					)}
 					<img src={student.image_url} alt="ava" />
 					{student.badge.map((elem) => (
-						<Badge
-							key={elem.id}
-							color={elem.badge_color}
-							content={elem.badge_name}
-						/>
+						<Badge key={elem.id} badge_color="red" color="red">
+							{elem.name_badge}
+						</Badge>
 					))}
 					<div className="favoriteButton">
 						{student.is_favorite ? (
@@ -130,6 +126,7 @@ export const Student = styled(StudentContainer)`
 		width: 200px;
 		height: 200px;
 		border-radius: 5px;
+		object-fit: cover;
 	}
 
 	& .content {
