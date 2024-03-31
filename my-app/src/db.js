@@ -24,22 +24,22 @@ export const db = [
 			{
 				id: '1',
 				name_technologie: 'HTML',
-				value: '75',
+				value: '75%',
 			},
 			{
 				id: '2',
 				name_technologie: 'CSS',
-				value: '75',
+				value: '75%',
 			},
 			{
 				id: '3',
 				name_technologie: 'JS',
-				value: '75',
+				value: '75%',
 			},
 			{
 				id: '4',
 				name_technologie: 'REACT',
-				value: '50',
+				value: '50%',
 			},
 		],
 		badge: [
@@ -78,22 +78,22 @@ export const db = [
 			{
 				id: '1',
 				name_technologie: 'HTML',
-				value: '55',
+				value: '55%',
 			},
 			{
 				id: '2',
 				name_technologie: 'CSS',
-				value: '30',
+				value: '30%',
 			},
 			{
 				id: '3',
 				name_technologie: 'JS',
-				value: '75',
+				value: '75%',
 			},
 			{
 				id: '4',
 				name_technologie: 'REACT',
-				value: '40',
+				value: '40%',
 			},
 		],
 		badge: [
@@ -143,22 +143,22 @@ export const db = [
 			{
 				id: '1',
 				name_technologie: 'html',
-				value: '80',
+				value: '80%',
 			},
 			{
 				id: '2',
 				name_technologie: 'css',
-				value: '90',
+				value: '90%',
 			},
 			{
 				id: '3',
 				name_technologie: 'js',
-				value: '75',
+				value: '75%',
 			},
 			{
 				id: '4',
 				name_technologie: 'REACT',
-				value: '75',
+				value: '75%',
 			},
 		],
 
@@ -203,22 +203,22 @@ export const db = [
 			{
 				id: '1',
 				name_technologie: 'HTML',
-				value: '80',
+				value: '80%',
 			},
 			{
 				id: '2',
 				name_technologie: 'CSS',
-				value: '80',
+				value: '80%',
 			},
 			{
 				id: '3',
 				name_technologie: 'JS',
-				value: '80',
+				value: '80%',
 			},
 			{
 				id: '4',
 				name_technologie: 'REACT',
-				value: '75',
+				value: '75%',
 			},
 		],
 		badge: [

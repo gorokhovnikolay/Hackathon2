@@ -6,16 +6,8 @@ import { useParams } from 'react-router';
 import { BreadCrumbs } from '../../components';
 import { getStudents, setStudents } from '../../localstorage';
 import { Badge } from '../../components';
-
-const Progress = ({ value, name_technologie, color, type }) => (
-	<div>
-		{name_technologie} - {value} - {color} - {type}
-	</div>
-);
-
-const Button = ({ color, onClick, name, type }) => (
-	<button onClick={onClick}>{name}</button>
-);
+import ProgressBar from '../../components/progress/progress';
+import Button from '../../components/button/button';
 
 const StudentContainer = ({ className }) => {
 	const { id } = useParams();
@@ -59,17 +51,19 @@ const StudentContainer = ({ className }) => {
 					<div className="favoriteButton">
 						{student.is_favorite ? (
 							<Button
+								width="200px"
 								color="#b98591"
 								onClick={onChangeFavorite}
-								name="Убрать из избранного"
-								type="закругленные края"
+								children="Убрать из избранного"
+								type="button"
 							/>
 						) : (
 							<Button
-								color="#00f0ac"
+								width="200px"
+								color="#1b1b1b"
 								onClick={onChangeFavorite}
-								name="Добавить в избранное"
-								type="прямые края"
+								children="Добавить в избранное"
+								type="button"
 							/>
 						)}
 					</div>
@@ -89,14 +83,34 @@ const StudentContainer = ({ className }) => {
 						</div>
 					</div>
 					<div className="progress">
-						{student.stack.map((elem) => (
-							<Progress
-								key={elem.id}
-								value={elem.value}
-								name_technologie={elem.name_technology}
-								color={elem.color}
-								type="type is empty"
-							/>
+						{student.stack.map((elem, index) => (
+							<div key={elem.id} className="progressContainer">
+								<p>{elem.name_technologie}</p>
+								{index === 0 && (
+									<ProgressBar type="circle" procent={elem.value} />
+								)}
+								{index === 1 && (
+									<ProgressBar type="pie" procent={elem.value} />
+								)}
+								{index === 2 && (
+									<ProgressBar
+										height="30px"
+										degree="100"
+										procent={elem.value}
+										borderWidth="2px"
+										borderColor="#1b1b1b"
+									/>
+								)}
+								{index === 3 && (
+									<ProgressBar
+										height="100px"
+										degree="360"
+										procent={elem.value}
+										borderWidth="2px"
+										borderColor="#1b1b1b"
+									/>
+								)}
+							</div>
 						))}
 					</div>
 					<ul>
@@ -153,6 +167,13 @@ export const Student = styled(StudentContainer)`
 
 		& .progress {
 			display: flex;
+			gap: 10px;
+			& .progressContainer {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 
 		& li {

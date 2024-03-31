@@ -3,7 +3,7 @@ import { StyledProgressBar } from './StyledProgressBar';
 const ProgressBar = ({
 	type = '',
 	procent = '50%',
-	color = 'black',
+	color = 'green',
 	width = '100px',
 	height = '100px',
 	degree = '90',
