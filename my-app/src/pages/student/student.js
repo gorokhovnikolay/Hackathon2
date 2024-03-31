@@ -5,7 +5,7 @@ import starEmpty from '../../img/star-empty.png';
 import { useParams } from 'react-router';
 import { BreadCrumbs } from '../../components';
 import { getStudents, setStudents } from '../../localstorage';
-import { Badge } from '../../components';
+import { Badge, ProgressBar } from '../../components';
 
 const Progress = ({ value, name_technologie, color, type }) => (
 	<div>
@@ -92,7 +92,7 @@ const StudentContainer = ({ className }) => {
 						{student.stack.map((elem) => (
 							<Progress
 								key={elem.id}
-								value={elem.value}
+								procent={elem.value}
 								name_technologie={elem.name_technology}
 								color={elem.color}
 								type="type is empty"

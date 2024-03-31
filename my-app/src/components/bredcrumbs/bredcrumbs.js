@@ -22,18 +22,26 @@ export const BreadCrumbsContainer = ({ className }) => {
 			{locationArr.map((path, i) => {
 				if (i === 0) {
 					return (
-						<>
+						<div className="main-breadcrumbs" key={i}>
 							<Link to="/">Главная</Link>
 							<div> / </div>
-						</>
+						</div>
 					);
 				}
 				if (path === 'student') {
-					return <a href={`/${path}/${student.id}`}>{student.name}</a>;
+					return (
+						<Link key={i} to={`/${path}/${student.id}`}>
+							{student.name}
+						</Link>
+					);
 				}
 
 				if (path === 'favorits') {
-					return <a href={`/${path}`}>избранное</a>;
+					return (
+						<Link key={i} to={`/${path}`}>
+							избранное
+						</Link>
+					);
 				}
 
 				return null;
@@ -52,5 +60,8 @@ export const BreadCrumbs = styled(BreadCrumbsContainer)`
 	& a {
 		color: black;
 		text-decoration: none;
+	}
+	& .main-breadcrumbs {
+		display: flex;
 	}
 `;
