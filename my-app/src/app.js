@@ -6,26 +6,41 @@ import { db } from './db';
 import { Header, Footer } from './components';
 import styled from 'styled-components';
 
+
+const AppColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100%;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: rgba(217, 217, 217, 0.5);
+`;
+
+const Content = styled.div`
+	padding: 100px 0;
+	min-height: 100%;
+`;
+
+
 export const App = () => {
 	if (localStorage.getItem('students') === null) {
 		setStudents(db, 'students');
 	}
 
 	return (
-		<>
-			<Container>
-				<Header />
-				<Page>
-					<Routes>
-						<Route path="/" element={<Main />} />
-						<Route path="/favorits" element={<div>Избранные</div>} />
-						<Route path="/student/:id" element={<Student />} />
-						<Route path="*" element={<div>Ошибка</div>} />
-					</Routes>
-				</Page>
-				<Footer />
-			</Container>
-		</>
+		<AppColumn>
+			<Header />
+			<Content>
+				<Routes>
+					<Route path="/" element={<Main />} />
+					<Route path="/favorits" element={<div>Избранные</div>} />
+					<Route path="/student/:id" element={<Student />} />
+					<Route path="*" element={<div>Ошибка</div>} />
+				</Routes>
+			</Content>
+			<Footer />
+		</AppColumn>
 	);
 };
 
