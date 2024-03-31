@@ -8,8 +8,12 @@ import styled from 'styled-components';
 const StudentCardContainer = ({ className, student }) => {
 	return (
 		<div className={className}>
-			<img src={student.image_url} alt={student.id} />
-			{student.is_favorite ? <img src="/star.png" alt="*" /> : ''}
+			{student.is_favorite ? (
+				<img className="card-star" src="/star.png" alt="*" />
+			) : (
+				''
+			)}
+			<img className="card-avatar" src={student.image_url} alt={student.id} />
 		</div>
 	);
 };
@@ -27,9 +31,14 @@ export const StudentCard = styled(StudentCardContainer)`
 	&:hover {
 		cursor: pointer;
 	}
-	& img {
+	& .card-avatar {
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
+	}
+
+	& .card-star {
+		position: absolute;
+		height: 69px;
 	}
 `;

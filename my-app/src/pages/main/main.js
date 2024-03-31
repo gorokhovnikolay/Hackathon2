@@ -28,12 +28,12 @@ const flickityOptions = {
 	initialIndex: 2,
 };
 
-const Star = styled.img`
-	height: 50px;
-	width: 50px;
-`;
+// const Star = styled.img`
+// 	height: 50px;
+// 	width: 50px;
+// `;
 
-// const students = getStudents('students');
+// // const students = getStudents('students');
 
 const MainContainer = ({ className }) => {
 	const [students, setStudents] = useState(getStudents('students'));

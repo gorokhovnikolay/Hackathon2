@@ -176,39 +176,44 @@ export const db = [
 	{
 		id: '4',
 		is_favorite: false,
-		name: 'Алексей',
-		age: '33',
+		name: 'Алексей Никитенко',
+		age: '21',
 		about_me:
 			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
-		image_url: '/assets/images/avata.jpg',
+		image_url: '/assets/images/alex.jpg',
 		social_network: [
 			{
 				id: '1',
-				name: 'telegram',
-				link: ' ',
+				name: 'VK',
+				link: 'https://vk.com/dnzx11',
+			},
+			{
+				id: '2',
+				name: 'TG',
+				link: '@Dnzqu',
 			},
 		],
 		merits: [
 			{
 				id: '1',
-				text: 'Разработал компенент',
+				text: 'Разрабатывал кастомный ProgressBar с динамическими опциями и Button-component',
 			},
 		],
 		stack: [
 			{
 				id: '1',
 				name_technologie: 'HTML',
-				value: '75',
+				value: '80',
 			},
 			{
 				id: '2',
 				name_technologie: 'CSS',
-				value: '75',
+				value: '80',
 			},
 			{
 				id: '3',
 				name_technologie: 'JS',
-				value: '75',
+				value: '80',
 			},
 			{
 				id: '4',
