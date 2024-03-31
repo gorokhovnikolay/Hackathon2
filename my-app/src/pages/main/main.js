@@ -5,6 +5,7 @@ import { StudentCard, Discription } from '../../components';
 import { getStudents } from '../../localstorage';
 // import star from '../../../public/star.png';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const PlateH2 = styled.h2`
 	color: black;
@@ -32,10 +33,11 @@ const Star = styled.img`
 	width: 50px;
 `;
 
-const students = getStudents('students');
+// const students = getStudents('students');
 
 const MainContainer = ({ className }) => {
-	console.log(students);
+	const [students, setStudents] = useState(getStudents('students'));
+
 	return (
 		<div className={className}>
 			<H2> Hackathon#2 </H2>

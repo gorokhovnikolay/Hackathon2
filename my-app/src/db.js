@@ -6,8 +6,7 @@ export const db = [
 		age: '33',
 		about_me:
 			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
-		image_url:
-			'https://masterpiecer-images.s3.yandex.net/eca073676da711eeb238d659965eed18:upscaled',
+		image_url: '/assets/images/nikolay_gorokhov.jpg',
 		social_network: [
 			{
 				id: '1',
@@ -61,8 +60,7 @@ export const db = [
 		age: '31',
 		about_me:
 			'Преподаватель, преподаватель-исследователь Специальность: 09.01.05 Комплексное обеспечение информационной безопасности автоматизированных систем 09.06.01 – Информатика и вычислительная техника; Кандидат технических наук; Дисциплины: Инженерная и компьютерная графика, Общая теория связи',
-		image_url:
-			'https://masterpiecer-images.s3.yandex.net/eca073676da711eeb238d659965eed18:upscaled',
+		image_url: '/assets/images/Maxim_kolmikov.png',
 		social_network: [
 			{
 				id: '1',
@@ -108,10 +106,10 @@ export const db = [
 	{
 		id: '3',
 		is_favorite: false,
-		name: 'Владислав Баранов',
+		name: 'Владислав',
 		age: '27',
 		about_me:
-			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
+			'Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа модели развития. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации систем массового участия. С другой стороны укрепление и развитие структуры требуют от нас анализа новых предложений. Равным образом новая модель организационной деятельности требуют от нас анализа систем массового участия',
 		image_url:
 			'https://masterpiecer-images.s3.yandex.net/eca073676da711eeb238d659965eed18:upscaled',
 		social_network: [
@@ -144,35 +142,34 @@ export const db = [
 		stack: [
 			{
 				id: '1',
-				name_technology: 'html',
+				name_technologie: 'html',
 				value: '80',
 			},
 			{
 				id: '2',
-				name_technology: 'css',
+				name_technologie: 'css',
 				value: '90',
 			},
 			{
 				id: '3',
-				name_technology: 'js',
+				name_technologie: 'js',
 				value: '75',
 			},
 			{
 				id: '4',
-				name_technology: 'REACT',
+				name_technologie: 'REACT',
 				value: '75',
 			},
 		],
+
 		badge: [
 			{
 				id: '1',
-				badge_name: 'creator',
-				badge_color: '#53ec53',
+				name_badge: 'creator',
 			},
 			{
 				id: '2',
-				badge_name: 'user',
-				badge_color: '#a0203a',
+				name_badge: 'user',
 			},
 		],
 	},
@@ -183,8 +180,7 @@ export const db = [
 		age: '33',
 		about_me:
 			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
-		image_url:
-			'https://masterpiecer-images.s3.yandex.net/eca073676da711eeb238d659965eed18:upscaled',
+		image_url: '/assets/images/avata.jpg',
 		social_network: [
 			{
 				id: '1',
@@ -195,20 +191,35 @@ export const db = [
 		merits: [
 			{
 				id: '1',
-				text: '    ',
+				text: 'Разработал компенент',
 			},
 		],
 		stack: [
 			{
 				id: '1',
-				name_technologie: '  ',
+				name_technologie: 'HTML',
+				value: '75',
+			},
+			{
+				id: '2',
+				name_technologie: 'CSS',
+				value: '75',
+			},
+			{
+				id: '3',
+				name_technologie: 'JS',
+				value: '75',
+			},
+			{
+				id: '4',
+				name_technologie: 'REACT',
 				value: '75',
 			},
 		],
 		badge: [
 			{
 				id: '1',
-				name_badge: '  ',
+				name_badge: 'student  ',
 			},
 		],
 	},

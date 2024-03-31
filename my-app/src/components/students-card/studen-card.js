@@ -9,6 +9,7 @@ const StudentCardContainer = ({ className, student }) => {
 	return (
 		<div className={className}>
 			<img src={student.image_url} alt={student.id} />
+			{student.is_favorite ? <img src="/star.png" alt="*" /> : ''}
 		</div>
 	);
 };

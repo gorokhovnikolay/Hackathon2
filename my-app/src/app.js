@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Favourites, Main, Student } from './pages';
-import { setStudents } from './localstorage';
+import { getStudents, setStudents } from './localstorage';
 import { db } from './db';
 import { Header, Footer } from './components';
 import styled from 'styled-components';
+
+if (getStudents('students') === null) {
+	setStudents(db, 'students');
+}
 
 const AppColumn = styled.div`
 	display: flex;
@@ -22,13 +26,6 @@ const Content = styled.div`
 `;
 
 export const App = () => {
-	// if (localStorage.getItem('students') === null) {
-	// 	setStudents(db, 'students');
-	// }
-	useEffect(() => {
-		setStudents(db, 'students');
-	}, []);
-
 	return (
 		<AppColumn>
 			<Header />

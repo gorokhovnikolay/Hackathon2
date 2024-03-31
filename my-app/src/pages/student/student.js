@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import starFull from '../../img/star-full.png';
 import starEmpty from '../../img/star-empty.png';
@@ -21,10 +21,11 @@ const Progress = ({ value, name_technologie, color, type }) => (
 const Button = ({ color, onClick, name, type }) => (
 	<button onClick={onClick}>{name}</button>
 );
-const students = JSON.parse(localStorage.getItem('students'));
+const students = JSON.parse(getStudents('students'));
 
 const StudentContainer = ({ className }) => {
 	const { id } = useParams();
+
 	const [student, setStudent] = useState(students.find((person) => person.id === id));
 
 	const onChangeFavorite = () => {
