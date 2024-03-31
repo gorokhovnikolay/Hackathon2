@@ -6,7 +6,6 @@ import { db } from './db';
 import { Header, Footer } from './components';
 import styled from 'styled-components';
 
-
 const AppColumn = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -18,10 +17,9 @@ const AppColumn = styled.div`
 `;
 
 const Content = styled.div`
-	padding: 100px 0;
+	padding: 0 0 100px 0;
 	min-height: 100%;
 `;
-
 
 export const App = () => {
 	if (localStorage.getItem('students') === null) {

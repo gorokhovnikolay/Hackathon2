@@ -7,4 +7,4 @@ export * from './progress/progress';
 export * from './header/header';
 export * from './footer/footer';
 export * from './students-card/studen-card';
-
+export * from './discription/discription'
