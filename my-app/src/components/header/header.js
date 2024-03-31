@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Menu } from './components/menu';
 
 const HeaderContainer = ({ className }) => {
@@ -20,3 +21,7 @@ export const Header = styled(HeaderContainer)`
 		margin: 0 auto;
 	}
 `;
+
+HeaderContainer.propTypes = {
+	className: PropTypes.string,
+};

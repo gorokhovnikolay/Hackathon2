@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const BadgeContainer = ({ className, children }) => {
 	return <span className={className}>{children}</span>;
@@ -12,3 +13,8 @@ export const Badge = styled(BadgeContainer)`
 	font-weight: 500;
 	border-radius: 9px;
 `;
+
+BadgeContainer.propTypees = {
+	className: PropTypes.string,
+	children: PropTypes.element,
+};

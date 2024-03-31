@@ -6,7 +6,7 @@ export const db = [
 		age: '33',
 		about_me:
 			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
-		image_url: 'assetsimages\nikolay_gorokhov.jpg',
+		image_url: 'assets/images/nikolay_gorokhov.jpg',
 		social_network: [
 			{
 				id: '1',
@@ -36,11 +36,20 @@ export const db = [
 				name_technologie: 'JS',
 				value: '75',
 			},
+			{
+				id: '4',
+				name_technologie: 'REACT',
+				value: '50',
+			},
 		],
 		Badge: [
 			{
 				id: '1',
 				name_badge: 'Teamlead',
+			},
+			{
+				id: '2',
+				name_badge: 'student',
 			},
 		],
 	},
@@ -90,42 +99,78 @@ export const db = [
 		Badge: [
 			{
 				id: '1',
-				name_badge: '',
+				name_badge: 'student',
 			},
 		],
 	},
 	{
 		id: '3',
 		is_favorite: false,
-		name: 'Владислав',
-		age: '33',
+		name: 'Владислав Баранов',
+		age: '27',
 		about_me:
-			'Не следует, однако забывать, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют определения и уточнения направлений прогрессивного развития.',
-		image_url: 'assets/images/image.jpg',
+			'Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа модели развития. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации систем массового участия. С другой стороны укрепление и развитие структуры требуют от нас анализа новых предложений. Равным образом новая модель организационной деятельности требуют от нас анализа систем массового участия',
+		image_url:
+			'https://masterpiecer-images.s3.yandex.net/eca073676da711eeb238d659965eed18:upscaled',
 		social_network: [
 			{
 				id: '1',
 				name: 'telegram',
-				link: ' ',
+				link: 'https://t.me/js_by_vladilen',
+			},
+			{
+				id: '2',
+				name: 'youTube',
+				link: 'https://youtube.com/@VladilenMinin',
+			},
+			{
+				id: '3',
+				name: 'vk',
+				link: 'https://vk.com/vladilen.minin',
 			},
 		],
 		merits: [
 			{
 				id: '1',
-				text: '    ',
+				text: 'В разботке приложения занимался созданием страниц участников проекта',
+			},
+			{
+				id: '2',
+				text: 'Занимался очень важной работой',
 			},
 		],
 		stack: [
 			{
 				id: '1',
-				name_technologie: '  ',
+				name_technology: 'html',
+				value: '80',
+			},
+			{
+				id: '2',
+				name_technology: 'css',
+				value: '90',
+			},
+			{
+				id: '3',
+				name_technology: 'js',
+				value: '75',
+			},
+			{
+				id: '3',
+				name_technology: 'REACT',
 				value: '75',
 			},
 		],
 		Badge: [
 			{
 				id: '1',
-				name_badge: '  ',
+				badge_name: 'creator',
+				badge_color: '#53ec53',
+			},
+			{
+				id: '2',
+				badge_name: 'user',
+				badge_color: '#a0203a',
 			},
 		],
 	},

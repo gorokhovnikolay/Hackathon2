@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -25,3 +26,9 @@ export const Item = styled(ItemContainer)`
 		font-weight: 600;
 	}
 `;
+
+ItemContainer.propTypes = {
+	className: PropTypes.string,
+	link: PropTypes.string,
+	children: PropTypes.string,
+};
