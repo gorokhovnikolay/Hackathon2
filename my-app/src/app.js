@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Main, Student } from './pages';
 import { setStudents } from './localstorage';
@@ -7,9 +7,9 @@ import { Header, Footer } from './components';
 import styled from 'styled-components';
 
 export const App = () => {
-	useEffect(() => {
+	if (localStorage.getItem('students') === null) {
 		setStudents(db, 'students');
-	}, []);
+	}
 
 	return (
 		<>
