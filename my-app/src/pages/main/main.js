@@ -3,9 +3,8 @@ import Flickity from 'react-flickity-component';
 import '../../components/flickity.css';
 import { StudentCard, Discription, H2 } from '../../components';
 import { getStudents } from '../../localstorage';
-// import star from '../../../public/star.png';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 const PlateH2 = styled.h2`
 	color: black;
@@ -25,15 +24,12 @@ const flickityOptions = {
 	initialIndex: 2,
 };
 
-// const Star = styled.img`
-// 	height: 50px;
-// 	width: 50px;
-// `;
-
-// // const students = getStudents('students');
-
 const MainContainer = ({ className }) => {
-	const [students, setStudents] = useState(getStudents('students'));
+	const [students, setStudents] = useState([]);
+
+	useLayoutEffect(() => {
+		setStudents(getStudents('students'));
+	}, []);
 
 	return (
 		<div className={className}>

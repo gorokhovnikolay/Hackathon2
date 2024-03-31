@@ -126,15 +126,16 @@ const StudentContainer = ({ className }) => {
 };
 
 export const Student = styled(StudentContainer)`
+	background-color: rgba(217, 217, 217, 0.5);
 	display: flex;
 	justify-content: space-between;
-	background: #eee;
 	font-weight: bold;
 	bottom: 0;
 	width: 920px;
 	height: 100%;
 	padding: 40px 40px;
 	margin: auto;
+	border-radius: 20px;
 
 	& img {
 		width: 200px;

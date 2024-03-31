@@ -22,32 +22,19 @@ const FavouritesContainer = ({ className }) => {
 	);
 	return (
 		<div className={className}>
-			<BreadCrumbs/>
+			<BreadCrumbs />
 			<H2> 🜲 Избранные 🜲 </H2>
 			<FavouritesStudents>
 				{students.map((student, index) => {
 					return (
 						<div key={student.id} className="Plate">
 							<Link to={`/student/${student.id}`}>
-								{/* {student.is_favorite ? (
+								<Link to={`/student/${student.id}`}>
 									<StudentCard
+										student={student}
 										index={index + 1}
 										boxShadow="0 0 20px #ffd700"
-									>
-										<PlateH2>{student.name}</PlateH2>
-									</StudentCard>
-								) : (
-									''
-								)} */}
-								<Link to={`/student/${student.id}`}>
-									{/* <StudentCard index={index + 1}>
-										{student.is_favorite ? (
-											<Star src="/star.png" alt="*" />
-										) : (
-											''
-										)}
-									</StudentCard> */}
-									<StudentCard student={student} />
+									/>
 								</Link>
 								<PlateH2>{student.name}</PlateH2>
 							</Link>
