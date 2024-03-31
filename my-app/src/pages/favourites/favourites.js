@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StudentCard, H2 } from '../../components';
+import { StudentCard, H2, BreadCrumbs } from '../../components';
 import { getStudents } from '../../localstorage';
 import { Link } from 'react-router-dom';
 
@@ -21,6 +21,7 @@ const students = getStudents('students');
 const FavouritesContainer = ({ className }) => {
 	return (
 		<div className={className}>
+			<BreadCrumbs/>
 			<H2> 🜲 Избранные 🜲 </H2>
 			<FavouritesStudents>
 				{students.map((student, index) => {
